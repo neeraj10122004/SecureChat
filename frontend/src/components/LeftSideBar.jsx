@@ -28,7 +28,7 @@ export const LeftSideBar = ({className,selecteduser,setselecteduser}) => {
                 
                  {
                     userDummyData.map((user,index)=>(
-                        <div onClick={()=>{setselecteduser(user)}} index={index} className={`flex justify-between p-1 items-center ${selecteduser?._id === user._id && 'bg-[#282142]/50'}`}>
+                        <div onClick={()=>{setselecteduser(user)}} key={index} className={`flex justify-between p-1 items-center ${selecteduser?._id === user._id && 'bg-[#282142]/50'}`}>
                             <div className='flex gap-3 items-center p-2'>
                                 <img src={user.profilePic} alt={user.fullName} className='rounded-full max-w-10 max-h-10'/>
                                 <div className='flex-col p-1'>
